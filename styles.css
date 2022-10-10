@@ -13,6 +13,8 @@ html, body {
     display: flex;
     justify-content: center;
     align-items: center;
+    position: fixed;
+    z-index: 0;
 }
 
 .calculator {
@@ -31,6 +33,7 @@ html, body {
     display: flex;
     align-items: center;
     justify-content: flex-end;
+    overflow: auto;
     border-radius: 50px;
     height: 75px;
     margin: 10px;
@@ -150,4 +153,76 @@ html, body {
     transition: ease 0.1s;
     background-color: white;
     cursor: pointer;
+}
+
+/*Modal*/
+.color-modal-container {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-color: rgb(255,255,255, 0.5);
+    animation-name: fadeIn;
+    animation-duration: 0.5s;
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+.color-modal {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 50vh;
+    height: 20vh;
+    border: 1px solid black;
+    border-radius: 40px;
+    background-color: white;
+}
+
+.color-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1vh 5vh;
+    padding: 20px;
+    width: 45vh;
+    height: 15vh;
+}
+
+.color {
+    border: 1px solid black;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+}
+
+.color:hover {
+    transition: ease 0.1ms;
+    box-shadow: 0 0 10px black;
+}
+
+#red {
+    background-color: #ff0000;
+}
+#yellow {
+    background-color: #ffff00;
+}
+#green {
+    background-color: #00ff00;
+}
+#cyan {
+    background-color: #00ffff;
+}
+#blue {
+    background-color: #0000ff;
+}
+#pink {
+    background-color: #ff00ff;
 }
