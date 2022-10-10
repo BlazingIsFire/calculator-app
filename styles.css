@@ -226,3 +226,52 @@ html, body {
 #pink {
     background-color: #ff00ff;
 }
+
+@media only screen and (max-width: 768px){
+    .calculator {
+        width: 600px;
+        height: 650px;
+        border-radius: 50px;
+    }
+    .cal-text {
+        height: 150px;
+    }
+    .outcome-text {
+        font-size: 80px;
+    }
+    .top-buttons-container {
+        height: 100px;
+    }
+    .clear-btn {
+        font-size: 40px;
+        width: 240px;
+    }
+    .color-btn {
+        font-size: 40px;
+        width: 240px;
+    }
+    .main-buttons-container {
+        height: 500px;
+    }
+    .main-numbers {
+        width: 450px;
+    }
+    .main-numbers-btn {
+        border-radius: 50px;
+        font-size: 60px;
+        width: 100px;
+        padding: 7px;
+        margin: 10px;
+        text-align: center;
+    }
+    .side-bar-container {
+        height: 380px;
+        width: 120px;
+        margin: 25px;
+    }
+    .side-bar-btn {
+        font-size: 60px;
+        width: 100px;
+        margin: 3px;
+    }
+}
