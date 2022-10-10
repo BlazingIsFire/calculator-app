@@ -50,7 +50,7 @@ colorButton.onclick = () => {
 }
 
 window.addEventListener('click', e => {
-    if (e.target.className == colorModal) {
+    if (e.target == colorModal) {
         colorModal.style.display = "none";
     }
 });
@@ -78,5 +78,6 @@ backgroundColors.map( color => {
                 background.style.backgroundColor = '#ff00ff';
                 break;
         }
+        setTimeout(() => {colorModal.style.display = "none"}, 100);
     })
 });
