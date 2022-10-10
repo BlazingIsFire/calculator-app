@@ -1,18 +1,77 @@
 var outcome = document.querySelector(".outcome-text");
-const clearButton = document.querySelector(".clear-btn");
-const numberOne = document.getElementById("#1");
-const numberTwo = document.getElementById("#2");
-const numberThree = document.getElementById("#3")
-const numberFour = document.getElementById("#4");
-const numberFive = document.getElementById("5");
-const numberSix = document.getElementById("#6");
-const numberSeven = document.getElementById("#7");
-const numberEight = document.getElementById("#8");
-const numberNine = document.getElementById("#9");
-const numberZero = document.getElementById("#0");
-const period = document.getElementById("#.");
-const divide = document.getElementById("divide");
-const multiply = document.getElementById("multiply");
-const subtract = document.getElementById("subtract");
-const addition = document.getElementById("addition");
-const equals = document.getElementById("equals");
+let background = document.querySelector(".main-container");
+let answer = "";
+let mainButtons = Array.from(document.getElementsByClassName("main-numbers-btn"));
+let mathButtons = Array.from(document.getElementsByClassName("side-bar-btn"));
+let backgroundColors = Array.from(document.getElementsByClassName("color"));
+let clearButton = document.querySelector(".clear-btn");
+let equals = document.getElementById("equals");
+let colorButton = document.querySelector(".color-btn");
+let colorModal = document.querySelector(".color-modal-container");
+
+mainButtons.map( button => {
+    button.addEventListener('click', e => {
+        switch(e.target.innerText){
+            default:
+                outcome.innerHTML += e.target.innerText;
+        }
+    })
+});
+
+mathButtons.map( mathButton => {
+    mathButton.addEventListener('click', e => {
+        switch(e.target.innerText){
+            case '=':
+                try{
+                    answer = eval(outcome.innerText);
+                    outcome.innerHTML = answer;
+                    break;
+                } catch {
+                    outcome.innerHTML = "Error!";
+                    break;
+                }
+            default:
+                outcome.innerHTML += e.target.innerText;
+        }
+    })
+})
+
+clearButton.addEventListener('click', e => {
+    outcome.innerHTML = "";
+    answer = "";
+});
+
+colorButton.onclick = () => {
+    colorModal.style.display = "flex";   
+}
+
+window.onclick = (e) => {
+    if (e.target == colorModal) {
+        colorModal.style.display = "none";
+    }
+}
+
+backgroundColors.map( color => {
+    color.addEventListener('click', e => {
+        switch(e.target.id){
+            case 'red':
+                background.style.backgroundColor = "#ff0000";
+                break;
+            case 'yellow':
+                background.style.backgroundColor = '#ffff00';
+                break;
+            case 'green':
+                background.style.backgroundColor = '#00ff00';
+                break;
+            case 'cyan':
+                background.style.backgroundColor = '#00ffff';
+                break;
+            case 'blue':
+                background.style.backgroundColor = '#0000ff';
+                break;
+            case 'pink':
+                background.style.backgroundColor = '#ff00ff';
+                break;
+        }
+    })
+});
