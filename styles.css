@@ -229,47 +229,47 @@ html, body {
 
 @media only screen and (max-width: 768px){
     .calculator {
-        width: 520px;
-        height: 570px;
+        width: 450px;
+        height: 500px;
         border-radius: 50px;
     }
     .cal-text {
-        height: 160px;
+        height: 120px;
     }
     .outcome-text {
-        font-size: 60px;
+        font-size: 50px;
     }
     .top-buttons-container {
-        height: 70px;
+        height: 60px;
     }
     .clear-btn {
-        font-size: 30px;
-        width: 200px;
+        font-size: 25px;
+        width: 160px;
     }
     .color-btn {
-        font-size: 30px;
-        width: 200px;
+        font-size: 25px;
+        width: 160px;
     }
     .main-buttons-container {
-        height: 385px;
+        height: 340px;
     }
     .main-numbers {
-        width: 350px;
+        width: 300px;
     }
     .main-numbers-btn {
-        font-size: 50px;
-        width: 70px;
-        margin: 10px;
+        font-size: 40px;
+        width: 50px;
+        margin: 8px;
         text-align: center;
     }
     .side-bar-container {
-        height: 340px;
+        height: 285px;
         width: 95px;
         margin: 25px;
     }
     .side-bar-btn {
-        font-size: 50px;
-        width: 75px;
+        font-size: 40px;
+        width: 70px;
         margin: 3px;
     }
 }
