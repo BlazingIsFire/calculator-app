@@ -50,7 +50,7 @@ colorButton.onclick = () => {
 }
 
 window.addEventListener('click', e => {
-    if (e.target == colorModal) {
+    if (e.target.className == colorModal) {
         colorModal.style.display = "none";
     }
 });
