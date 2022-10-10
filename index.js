@@ -1,3 +1,4 @@
+// Variables
 var outcome = document.querySelector(".outcome-text");
 let background = document.querySelector(".main-container");
 let answer = "";
@@ -9,6 +10,7 @@ let equals = document.getElementById("equals");
 let colorButton = document.querySelector(".color-btn");
 let colorModal = document.querySelector(".color-modal-container");
 
+// 0-9 Buttons listener
 mainButtons.map( button => {
     button.addEventListener('click', e => {
         switch(e.target.innerText){
@@ -18,6 +20,7 @@ mainButtons.map( button => {
     })
 });
 
+// Mathmatical Buttons listener
 mathButtons.map( mathButton => {
     mathButton.addEventListener('click', e => {
         switch(e.target.innerText){
@@ -36,6 +39,7 @@ mathButtons.map( mathButton => {
     })
 })
 
+// Clear & Color button listeners
 clearButton.addEventListener('click', e => {
     outcome.innerHTML = "";
     answer = "";
@@ -50,7 +54,7 @@ window.onclick = (e) => {
         colorModal.style.display = "none";
     }
 }
-
+// Background color changer
 backgroundColors.map( color => {
     color.addEventListener('click', e => {
         switch(e.target.id){
