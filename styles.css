@@ -27,7 +27,7 @@ html, body {
     background-color: gray;
     border: 1px solid black;
 }
-
+/* Outcome box */
 .cal-text {
     background-color: white;
     display: flex;
@@ -43,7 +43,7 @@ html, body {
     margin-right: 6px;
     font-size: 50px;
 }
-
+/* Clear & Color Buttons */
 .top-buttons-container {
     background-color: black;
     margin-left: 10px;
@@ -90,7 +90,7 @@ html, body {
     background-color: white;
     cursor: pointer;
 }
-
+/* 0-9 Buttons */
 .main-buttons-container {
     background-color: black;
     display: flex;
@@ -126,7 +126,7 @@ html, body {
     background-color: white;
     cursor: pointer;
 }
-
+/* Mathmatical Buttons */
 .side-bar-container {
     background-color: black;
     display: flex;
