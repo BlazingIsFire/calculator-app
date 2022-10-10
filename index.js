@@ -49,11 +49,12 @@ colorButton.onclick = () => {
     colorModal.style.display = "flex";   
 }
 
-window.onclick = (e) => {
+window.addEventListener('click', e => {
     if (e.target == colorModal) {
         colorModal.style.display = "none";
     }
-}
+});
+
 // Background color changer
 backgroundColors.map( color => {
     color.addEventListener('click', e => {
